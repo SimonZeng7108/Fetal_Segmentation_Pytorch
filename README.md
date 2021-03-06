@@ -23,7 +23,7 @@ PyTorch Computer Vision Cookbook-Michael Avendi](https://www.packtpub.com/produc
 - `PIL`
 
 #SegNet
-<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo1.png" width="300" height="300">
-<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo2.png" width="300" height="300"><br/>
-<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/loss.png" width="300" height="300">
-<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/acc.png" width="300" height="300"><br/>
+<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo1.png" width="640" height="480">
+<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo2.png" width="640" height="480"><br/>
+<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/loss.png" width="640" height="480">
+<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/acc.png" width="640" height="480"><br/>
