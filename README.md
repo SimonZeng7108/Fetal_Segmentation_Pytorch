@@ -29,7 +29,8 @@ PyTorch Computer Vision Cookbook-Michael Avendi](https://www.packtpub.com/produc
 <img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/acc.png" width="320" height="240"><br/>
 
 ## UNet
-<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo_1.png" width="640" height="177">
-<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo_2.png" width="640" height="177">
-<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/UNet%20results/loss.png" width="32" height="20">
-<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/UNet%20results/acc.png" width="32" height="24"><br/>
+[Unsupervised Learning/random_walker.py](https://github.com/SimonZeng7108/Coral_Analysis/blob/main/Unsupervised%20Learning/random_walker.py): Random Walker Segmentaion <br/>
+<img src="https://github.com/SimonZeng7108/Coral_Analysis/blob/main/image_denoised.jpg" width="300" height="300">
+<img src="https://github.com/SimonZeng7108/Coral_Analysis/blob/main/Unsupervised%20Learning/random_walker.png" width="300" height="300"><br/>
+<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/UNet%20results/loss.png" width="320" height="240">
+<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/UNet%20results/acc.png" width="320" height="240"><br/>
