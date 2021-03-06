@@ -25,5 +25,5 @@ PyTorch Computer Vision Cookbook-Michael Avendi](https://www.packtpub.com/produc
 ## SegNet
 <img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo_1.png" width="640" height="177">
 <img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo_2.png" width="640" height="177"><br/>
-<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/loss.png" width="640" height="480">
-<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/acc.png" width="640" height="480"><br/>
+<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/loss.png" width="320" height="240">
+<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/acc.png" width="320" height="240"><br/>
