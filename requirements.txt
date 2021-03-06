@@ -1,8 +1,0 @@
-torch == 1.8.0
-torchvision
-torchsummary
-numpy
-scipy
-skimage
-matplotlib
-PIL
