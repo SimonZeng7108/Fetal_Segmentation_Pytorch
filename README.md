@@ -11,3 +11,13 @@ PyTorch Computer Vision Cookbook-Michael Avendi](https://www.packtpub.com/produc
 [train.py](https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/train.py): The trainer to run epochs <br/>
 [loss_functions.py](https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/loss_functions.py): Define the dice loss + BCElogits loss function <br/>
 [predict.py](https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/predict.py): Script to predict unlabeld images <br/>
+
+## Requirements 
+- `torch == 1.8.0`
+- `torchvision`
+- `torchsummary`
+- `numpy`
+- `scipy`
+- `skimage`
+- `matplotlib`
+- `PIL`
