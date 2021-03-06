@@ -23,14 +23,15 @@ PyTorch Computer Vision Cookbook-Michael Avendi](https://www.packtpub.com/produc
 - `PIL`
 
 ## SegNet
+SegNet Model Results
 <img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo_1.png" width="640" height="177">
-<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo_2.png" width="640" height="177">
+<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo_2.png" width="640" height="177"><br/>
 <img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/loss.png" width="320" height="240">
 <img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/acc.png" width="320" height="240"><br/>
 
 ## UNet
-[Unsupervised Learning/random_walker.py](https://github.com/SimonZeng7108/Coral_Analysis/blob/main/Unsupervised%20Learning/random_walker.py): Random Walker Segmentaion <br/>
-<img src="https://github.com/SimonZeng7108/Coral_Analysis/blob/main/image_denoised.jpg" width="300" height="300">
-<img src="https://github.com/SimonZeng7108/Coral_Analysis/blob/main/Unsupervised%20Learning/random_walker.png" width="300" height="300"><br/>
+Unet Model Results <br/>
+<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo_1.png" width="640" height="177">
+<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo_2.png" width="640" height="177">
 <img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/UNet%20results/loss.png" width="320" height="240">
 <img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/UNet%20results/acc.png" width="320" height="240"><br/>
