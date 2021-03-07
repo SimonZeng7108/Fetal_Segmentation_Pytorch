@@ -31,7 +31,7 @@ SegNet Model Results<br/>
 
 ## UNet
 Unet Model Results <br/>
-<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo_1.png" width="640" height="177"><br/>
-<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/Demo_2.png" width="640" height="177"><br/>
+<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/UNet%20results/demo_1.png" width="640" height="177"><br/>
+<img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/UNet%20results/demo_2.png" width="640" height="177"><br/>
 <img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/UNet%20results/loss.png" width="320" height="240">
 <img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/UNet%20results/acc.png" width="320" height="240"><br/>
