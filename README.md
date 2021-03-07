@@ -30,7 +30,7 @@ SegNet Model Results<br/>
 <img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/SegNet%20results/acc.png" width="320" height="240"><br/>
 
 ## UNet
-This UNet implementation is rather a vanilla model, there is no BatchNorm, DropOut utilised. If one follow the original paper strictly, there will be a conflict betweent input and output sizes(572 to 388). To avoid label and prediction mismatch in this implementatino, a resize function has been applied after every up-sampling in expansive path and at final output layer.
+This UNet implementation is rather a vanilla model, there is no BatchNorm, DropOut utilised. If one follow the original paper strictly, there will be a conflict betweent input and output sizes(572 to 388). To avoid label and prediction mismatch in this implementatino, a resize function has been applied after every up-convolution in expansive path and at final output layer.<br/>
 Unet Model Results <br/>
 <img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/UNet%20results/demo_1.png" width="640" height="177"><br/>
 <img src="https://github.com/SimonZeng7108/Fetal_Segmentation_Pytorch/blob/main/UNet%20results/demo_2.png" width="640" height="177"><br/>
