@@ -1,3 +1,4 @@
+#%%
 import os
 import numpy as np
 import torch
@@ -37,6 +38,7 @@ img_t=to_tensor(img).unsqueeze(0).to(device)
 pred=model(img_t)
 pred=torch.sigmoid(pred)[0]
 mask_pred= (pred[0]>=0.5).to('cpu')
+
 
 #Plot the graph
 #Define a show mask on image function
