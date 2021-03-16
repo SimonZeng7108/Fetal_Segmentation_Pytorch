@@ -65,9 +65,9 @@ from torchvision.transforms.functional import resize
 #Cosntruct a two-convolutional-layer function
 def DoubleConv(in_channel, out_channel):
     doubleconv = nn.Sequential(
-        nn.Conv2d(in_channel, out_channel, kernel_size = 3),
+        nn.Conv2d(in_channel, out_channel, kernel_size = 3, padding = 1),
         nn.ReLU(inplace = True),
-        nn.Conv2d(out_channel, out_channel, kernel_size = 3),
+        nn.Conv2d(out_channel, out_channel, kernel_size = 3, padding = 1),
         nn.ReLU(inplace = True)
     )
     return doubleconv
@@ -126,7 +126,7 @@ class UNet(nn.Module):
         self.out = nn.Conv2d(
             in_channels = 64,
             out_channels = 1,
-            kernel_size = 1
+            kernel_size = 1,
         )
     
     #Build up the model
@@ -144,23 +144,18 @@ class UNet(nn.Module):
 
         #Decoder
         x10 = self.up_trans_1(x9)
-        y1 = Resizing(x10, x7)
-        x11 = self.up_conv_1(torch.cat([y1, x7], 1))
+        x11 = self.up_conv_1(torch.cat([x10, x7], 1))
 
         x12 = self.up_trans_2(x11)
-        y2 = Resizing(x12, x5)
-        x13 = self.up_conv_2(torch.cat([y2, x5], 1))
+        x13 = self.up_conv_2(torch.cat([x12, x5], 1))
 
         x14 = self.up_trans_3(x13)
-        y3 = Resizing(x14, x3)
-        x15 = self.up_conv_3(torch.cat([y3, x3], 1))
+        x15 = self.up_conv_3(torch.cat([x14, x3], 1))
 
         x16 = self.up_trans_4(x15)
-        y4 = Resizing(x16, x1)
-        x17 = self.up_conv_4(torch.cat([y4, x1], 1))
+        x17 = self.up_conv_4(torch.cat([x16, x1], 1))
         
         x_out = self.out(x17)
-        x_out = resize(x_out, x1.size()[2]+4)
         return x_out
         
 
@@ -169,5 +164,5 @@ class UNet(nn.Module):
 #     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 #     model=model.to(device)
 #     from torchsummary import summary
-#     summary(model, input_size=(1, 280, 280))
+#     summary(model, input_size=(1, 192, 192))
 

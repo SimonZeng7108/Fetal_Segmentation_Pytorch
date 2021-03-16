@@ -1,5 +1,7 @@
 import torch
 from loss_functions import loss_batch
+from torch.utils.tensorboard import SummaryWriter
+tb = SummaryWriter()
 #Training the Model
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -80,6 +82,11 @@ def train_val(model, params):
             print("Loading best model weights!")
             model.load_state_dict(best_model_wts) 
             
+        tb.add_scalar("Train Loss", train_loss, epoch)
+        tb.add_scalar("Val loss", val_loss, epoch)
+        tb.add_scalar("Train acc", train_metric, epoch)
+        tb.add_scalar("Val acc", val_metric, epoch)
+
         print("train loss: %.6f, dice: %.2f" %(train_loss,100*train_metric))
         print("val loss: %.6f, dice: %.2f" %(val_loss,100*val_metric))
         print("-"*10)

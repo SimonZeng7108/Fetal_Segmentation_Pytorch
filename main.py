@@ -5,8 +5,8 @@ from model import UNet, SegNet
 #Set parameters
 path2train="./data/training"        #Path of train image
 path2models= "./models/"            #Path to save best weight
-h,w= 200,200                        #Input shape
-model = SegNet()                    #Options: UNet(), SegNet()
+h,w= 192,192                        #Input shape
+model = UNet()                    #Options: UNet(), SegNet()
 epochs = 150                        #Number of training iterations
 lr=3e-4                             #Optimiser learning rate
 factor=0.5                          #Schedule learning rate drop rate
@@ -48,10 +48,24 @@ val_dl = DataLoader(val_ds, batch_size=8, shuffle=False)
 #Load model
 import torch
 from torchsummary import summary
+
+
 model = model
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model=model.to(device)
 summary(model, input_size=(1, h, w))
+
+#tensorboard
+from torch.utils.tensorboard import SummaryWriter
+import torchvision
+tb = SummaryWriter()
+images, labels = next(iter(train_dl))
+grid = torchvision.utils.make_grid(images)
+tb.add_image("images", grid)
+images = images.to('cuda')
+print(images.type())
+tb.add_graph(model, images)
+
 
 #Load Loss Function
 from loss_functions import loss_func
@@ -98,3 +112,4 @@ plt.xlabel("Training Epochs")
 plt.legend()
 plt.show()
 
+tb.close()
