@@ -6,7 +6,7 @@ from model import UNet, SegNet
 path2train="./data/training"        #Path of train image
 path2models= "./models/"            #Path to save best weight
 h,w= 192,192                        #Input shape
-model = UNet()                    #Options: UNet(), SegNet()
+model = UNet()                      #Options: UNet(), SegNet()
 epochs = 150                        #Number of training iterations
 lr=3e-4                             #Optimiser learning rate
 factor=0.5                          #Schedule learning rate drop rate
