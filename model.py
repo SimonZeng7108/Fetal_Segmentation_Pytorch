@@ -65,9 +65,9 @@ from torchvision.transforms.functional import resize
 #Cosntruct a two-convolutional-layer function
 def DoubleConv(in_channel, out_channel):
     doubleconv = nn.Sequential(
-        nn.Conv2d(in_channel, out_channel, kernel_size = 3, padding = 1),
+        nn.Conv2d(in_channel, out_channel, kernel_size = 3, padding=1),
         nn.ReLU(inplace = True),
-        nn.Conv2d(out_channel, out_channel, kernel_size = 3, padding = 1),
+        nn.Conv2d(out_channel, out_channel, kernel_size = 3, padding=1),
         nn.ReLU(inplace = True)
     )
     return doubleconv
@@ -123,10 +123,10 @@ class UNet(nn.Module):
         self.up_conv_4 = DoubleConv(128, 64)
 
         #Output convolutional layer
-        self.out = nn.Conv2d(
-            in_channels = 64,
-            out_channels = 1,
-            kernel_size = 1,
+        self.out = nn.Sequential(
+            nn.Conv2d(in_channels = 64, out_channels = 2, kernel_size = 3, padding=1),
+            nn.ReLU(inplace = True),
+            nn.Conv2d(in_channels = 2, out_channels = 1, kernel_size = 1),
         )
     
     #Build up the model
@@ -160,9 +160,9 @@ class UNet(nn.Module):
         
 
 # if __name__ == '__main__':
-#     model = UNet()
+#     model =UNet()
 #     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 #     model=model.to(device)
 #     from torchsummary import summary
-#     summary(model, input_size=(1, 192, 192))
+#     summary(model, input_size=(1, 240, 240))
 

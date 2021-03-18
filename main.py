@@ -3,13 +3,13 @@ import os
 import torch
 from model import UNet, SegNet
 #Set parameters
-path2train="./data/training"        #Path of train image
+path2train="./data/training"          #Path of train image
 path2models= "./models/"            #Path to save best weight
-h,w= 192,192                        #Input shape
-model = UNet()                      #Options: UNet(), SegNet()
+h,w= 240,240                        #Input shape
+model = UNet()                    #Options: UNet(), SegNet()
 epochs = 150                        #Number of training iterations
-lr=3e-4                             #Optimiser learning rate
-factor=0.5                          #Schedule learning rate drop rate
+lr=1e-4                             #Optimiser learning rate
+factor=0.2                          #Schedule learning rate drop rate
 
 
 #Define data augmentation
@@ -48,24 +48,23 @@ val_dl = DataLoader(val_ds, batch_size=8, shuffle=False)
 #Load model
 import torch
 from torchsummary import summary
-
-
 model = model
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model=model.to(device)
 summary(model, input_size=(1, h, w))
 
+
 #tensorboard
 from torch.utils.tensorboard import SummaryWriter
 import torchvision
+import copy
 tb = SummaryWriter()
 images, labels = next(iter(train_dl))
 grid = torchvision.utils.make_grid(images)
 tb.add_image("images", grid)
-images = images.to('cuda')
-print(images.type())
-tb.add_graph(model, images)
-
+sample_images = copy.deepcopy(images)
+sample_images = sample_images.to('cuda')
+tb.add_graph(model, sample_images)
 
 #Load Loss Function
 from loss_functions import loss_func
@@ -74,7 +73,7 @@ from loss_functions import loss_func
 from torch import optim
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 opt = optim.Adam(model.parameters(), lr=lr)
-lr_scheduler = ReduceLROnPlateau(opt, mode='min',factor=factor, patience=20,verbose=1)
+lr_scheduler = ReduceLROnPlateau(opt, mode='min',factor=factor, patience=10,verbose=1)
 
 #Load trainer
 from train import train_val
