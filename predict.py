@@ -15,13 +15,13 @@ rndImg=np.random.choice(imgsList,1)
 print(rndImg)
 
 #Load model
-from model import SegNet
+from model import SegNet, UNet
 params_model={
         "input_shape": (1,h,w),
         "initial_filters": 16, 
         "num_outputs": 1,
             }
-model = SegNet()
+model = UNet()
 model = model.to(device)
 
 #Evaluate
